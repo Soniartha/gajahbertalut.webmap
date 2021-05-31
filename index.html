@@ -349,11 +349,11 @@
             propertyName: 'kode_pohon'}));
         document.getElementsByClassName('search-button')[0].className +=
          ' fa fa-binoculars';
-        L.control.scale(
-            metric: true;
-            imperial: false;
-            position: 'bottomright';
-        ).addTo(map);
+        L.control.scale({
+            metric: true,
+            imperial: false,
+            position: 'bottomright'
+        }).addTo(map);
         L.Control.Watermark=L.Control.extend({
             onAdd = function(map){
                 var img = L.DomUtil.create('img');
@@ -365,7 +365,7 @@
         });
         L.control.watermark = function(opts){
             return new L.Control.Watermark(opts);
-        };
+        }
         L.control.watermark().addTo(Map);
         </script>
     </body>
