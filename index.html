@@ -349,6 +349,19 @@
             propertyName: 'kode_pohon'}));
         document.getElementsByClassName('search-button')[0].className +=
          ' fa fa-binoculars';
+        L.Control.Watermark=L.Control.extend({
+            onAdd:function(map){
+                var img = L.DomUtil.create('img');
+                img.src = 'logo_dlhriau_nobg.png';
+                img.style.width = '200px'
+            },
+            onRemove:function(map){},
+        });
+        L.control.watermark = function(opts){
+            return new L.Control.Watermark(opts);
+        }
+        L.control.watermark().addTo(map);
+
         </script>
     </body>
 </html>
