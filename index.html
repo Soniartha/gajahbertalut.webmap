@@ -20,9 +20,6 @@
             padding: 0;
             margin: 0;
         }
-        .leaflet-popup-content > table img{
-            width: 200px;
-        }
         </style>
         <title></title>
     </head>
@@ -112,43 +109,56 @@
         function pop_BatasKawasanHutanAdatGajahBertalut_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>Provinsi</strong><br />' + (feature.properties['PROVINSI'] !== null ? autolinker.link(feature.properties['PROVINSI'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Provinsi</th>\
+                        <td>' + (feature.properties['PROVINSI'] !== null ? autolinker.link(feature.properties['PROVINSI'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Kabupaten</strong><br />' + (feature.properties['KABUPATEN'] !== null ? autolinker.link(feature.properties['KABUPATEN'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Kabupaten</th>\
+                        <td>' + (feature.properties['KABUPATEN'] !== null ? autolinker.link(feature.properties['KABUPATEN'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Kecamatan</strong><br />' + (feature.properties['KECAMATAN'] !== null ? autolinker.link(feature.properties['KECAMATAN'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Kecamatan</th>\
+                        <td>' + (feature.properties['KECAMATAN'] !== null ? autolinker.link(feature.properties['KECAMATAN'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Desa</strong><br />' + (feature.properties['DESA'] !== null ? autolinker.link(feature.properties['DESA'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Desa</th>\
+                        <td>' + (feature.properties['DESA'] !== null ? autolinker.link(feature.properties['DESA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SK MenLHK</strong><br />' + (feature.properties['SK_MENLHK'] !== null ? autolinker.link(feature.properties['SK_MENLHK'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">SK MenLHK</th>\
+                        <td>' + (feature.properties['SK_MENLHK'] !== null ? autolinker.link(feature.properties['SK_MENLHK'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Tanggal Penetapan</strong><br />' + (feature.properties['TGL_PNTPN'] !== null ? autolinker.link(feature.properties['TGL_PNTPN'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tanggal Penetapan</th>\
+                        <td>' + (feature.properties['TGL_PNTPN'] !== null ? autolinker.link(feature.properties['TGL_PNTPN'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Fungsi Kawasan</strong><br />' + (feature.properties['FUNGSI_KWS'] !== null ? autolinker.link(feature.properties['FUNGSI_KWS'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Fungsi Kawasan</th>\
+                        <td>' + (feature.properties['FUNGSI_KWS'] !== null ? autolinker.link(feature.properties['FUNGSI_KWS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Dasar Penetapan</strong><br />' + (feature.properties['DSR_PNTPN'] !== null ? autolinker.link(feature.properties['DSR_PNTPN'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dasar Penetapan</th>\
+                        <td>' + (feature.properties['DSR_PNTPN'] !== null ? autolinker.link(feature.properties['DSR_PNTPN'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Nama Kawasan</strong><br />' + (feature.properties['NAMA_KWS'] !== null ? autolinker.link(feature.properties['NAMA_KWS'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nama Kawasan</th>\
+                        <td>' + (feature.properties['NAMA_KWS'] !== null ? autolinker.link(feature.properties['NAMA_KWS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Nama MHA</strong><br />' + (feature.properties['NAMA_MHA'] !== null ? autolinker.link(feature.properties['NAMA_MHA'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nama MHA</th>\
+                        <td>' + (feature.properties['NAMA_MHA'] !== null ? autolinker.link(feature.properties['NAMA_MHA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Luas (ha)</strong><br />' + (feature.properties['LUAS'] !== null ? autolinker.link(feature.properties['LUAS'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Luas (ha)</th>\
+                        <td>' + (feature.properties['LUAS'] !== null ? autolinker.link(feature.properties['LUAS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Nama Hutan Adat</strong><br />' + (feature.properties['NAMA_HA'] !== null ? autolinker.link(feature.properties['NAMA_HA'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nama Hutan Adat</th>\
+                        <td>' + (feature.properties['NAMA_HA'] !== null ? autolinker.link(feature.properties['NAMA_HA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Skema Perhutanan Sosial</strong><br />' + (feature.properties['SKEMA_PS'] !== null ? autolinker.link(feature.properties['SKEMA_PS'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Skema Perhutanan Sosial</th>\
+                        <td>' + (feature.properties['SKEMA_PS'] !== null ? autolinker.link(feature.properties['SKEMA_PS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -184,61 +194,80 @@
         function pop_GajahBertalut_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>Kode Pohon</strong><br />' + (feature.properties['kode_pohon'] !== null ? autolinker.link(feature.properties['kode_pohon'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Kode Pohon</th>\
+                        <td>' + (feature.properties['kode_pohon'] !== null ? autolinker.link(feature.properties['kode_pohon'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Nama Lokal</strong><br />' + (feature.properties['nama_lokal'] !== null ? autolinker.link(feature.properties['nama_lokal'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nama Lokal</th>\
+                        <td>' + (feature.properties['nama_lokal'] !== null ? autolinker.link(feature.properties['nama_lokal'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Nama Latin</strong><br />' + (feature.properties['nama_latin'] !== null ? autolinker.link(feature.properties['nama_latin'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nama Latin</th>\
+                        <td>' + (feature.properties['nama_latin'] !== null ? autolinker.link(feature.properties['nama_latin'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Tipe Pohon</strong><br />' + (feature.properties['tipe_pohon'] !== null ? autolinker.link(feature.properties['tipe_pohon'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tipe Pohon</th>\
+                        <td>' + (feature.properties['tipe_pohon'] !== null ? autolinker.link(feature.properties['tipe_pohon'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Status IUCN</strong><br />' + (feature.properties['status_iuc'] !== null ? autolinker.link(feature.properties['status_iuc'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Status IUCN</th>\
+                        <td>' + (feature.properties['status_iuc'] !== null ? autolinker.link(feature.properties['status_iuc'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Diameter (cm)</strong><br />' + (feature.properties['diameter_c'] !== null ? autolinker.link(feature.properties['diameter_c'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Diameter (cm)</th>\
+                        <td>' + (feature.properties['diameter_c'] !== null ? autolinker.link(feature.properties['diameter_c'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Tinggi (m)</strong><br />' + (feature.properties['tinggi_m'] !== null ? autolinker.link(feature.properties['tinggi_m'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tinggi (m)</th>\
+                        <td>' + (feature.properties['tinggi_m'] !== null ? autolinker.link(feature.properties['tinggi_m'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Jarak ke Permukiman (km)</strong><br />' + (feature.properties['jarak_perm'] !== null ? autolinker.link(feature.properties['jarak_perm'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Jarak ke Permukiman (km)</th>\
+                        <td>' + (feature.properties['jarak_perm'] !== null ? autolinker.link(feature.properties['jarak_perm'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Latitude</strong><br />' + (feature.properties['latitude'] !== null ? autolinker.link(feature.properties['latitude'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Latitude</th>\
+                        <td>' + (feature.properties['latitude'] !== null ? autolinker.link(feature.properties['latitude'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Longitude</strong><br />' + (feature.properties['longitude'] !== null ? autolinker.link(feature.properties['longitude'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Longitude</th>\
+                        <td>' + (feature.properties['longitude'] !== null ? autolinker.link(feature.properties['longitude'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Nama Khas Wilayah</strong><br />' + (feature.properties['nama_khas'] !== null ? autolinker.link(feature.properties['nama_khas'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nama Khas Wilayah</th>\
+                        <td>' + (feature.properties['nama_khas'] !== null ? autolinker.link(feature.properties['nama_khas'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Nama Surveyor</strong><br />' + (feature.properties['nama_surve'] !== null ? autolinker.link(feature.properties['nama_surve'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nama Surveyor</th>\
+                        <td>' + (feature.properties['nama_surve'] !== null ? autolinker.link(feature.properties['nama_surve'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Tanggal Survei</strong><br />' + (feature.properties['jadwal_sur'] !== null ? autolinker.link(feature.properties['jadwal_sur'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tanggal Survei</th>\
+                        <td>' + (feature.properties['jadwal_sur'] !== null ? autolinker.link(feature.properties['jadwal_sur'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Serapan Karbon (kgC)</strong><br />' + (feature.properties['CO2_calcul'] !== null ? autolinker.link(feature.properties['CO2_calcul'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Serapan Karbon (kgC)</th>\
+                        <td>' + (feature.properties['CO2_calcul'] !== null ? autolinker.link(feature.properties['CO2_calcul'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Metode Karbon</strong><br />' + (feature.properties['metode_kar'] !== null ? autolinker.link(feature.properties['metode_kar'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Metode Karbon</th>\
+                        <td>' + (feature.properties['metode_kar'] !== null ? autolinker.link(feature.properties['metode_kar'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Harga Adopsi</strong><br />' + (feature.properties['harga_adop'] !== null ? autolinker.link(feature.properties['harga_adop'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Harga Adopsi</th>\
+                        <td>' + (feature.properties['harga_adop'] !== null ? autolinker.link(feature.properties['harga_adop'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Status Adopsi</strong><br />' + (feature.properties['status_ado'] !== null ? autolinker.link(feature.properties['status_ado'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Status Adopsi</th>\
+                        <td>' + (feature.properties['status_ado'] !== null ? autolinker.link(feature.properties['status_ado'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Nama Pengadopsi</strong><br />' + (feature.properties['nama_penga'] !== null ? autolinker.link(feature.properties['nama_penga'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nama Pengadopsi</th>\
+                        <td>' + (feature.properties['nama_penga'] !== null ? autolinker.link(feature.properties['nama_penga'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Masa Berlaku</strong><br />' + (feature.properties['masa_berla'] !== null ? autolinker.link(feature.properties['masa_berla'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Masa Berlaku</th>\
+                        <td>' + (feature.properties['masa_berla'] !== null ? autolinker.link(feature.properties['masa_berla'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>Foto</strong><br />' + (feature.properties['foto_2'] !== null ? '<img src="images/' + String(feature.properties['foto_2']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
@@ -341,7 +370,6 @@
             propertyName: 'kode_pohon'}));
         document.getElementsByClassName('search-button')[0].className +=
          ' fa fa-binoculars';
-        
         </script>
     </body>
 </html>
