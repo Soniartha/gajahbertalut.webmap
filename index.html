@@ -370,8 +370,17 @@
             layer: cluster_GajahBertalut_4,
             initial: false,
             hideMarkerOnCollapse: true,
+            textPlaceholder: 'Cari berdasarkan kode pohon',
             propertyName: 'kode_pohon'}));
         document.getElementsByClassName('search-button')[0].className +=
+         ' fa fa-binoculars';
+        map.addControl(new L.Control.Search({
+            layer: cluster_GajahBertalut_4,
+            initial: false,
+            hideMarkerOnCollapse: true,
+            textPlaceholder: 'Cari berdasarkan nama lokal',
+            propertyName: 'nama_lokal'}));
+        document.getElementsByClassName('search-button')[1].className +=
          ' fa fa-binoculars';
         L.Control.Watermark=L.Control.extend({
             onAdd:function(map){
